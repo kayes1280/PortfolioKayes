@@ -28,18 +28,20 @@ export default function ServicesPage() {
     ];
 
     return (
-        <section className="mb-20 mt-20 w-[80%] mx-auto">
-            <div className="mb-10">
-                <h1 className="flex items-center justify-center text-[60px] text-[#dedbd2]">Services</h1>
-                <p className="flex text-center text-[20px] text-[#dedbd2]">I offer modern and scalable web development services, focusing on both frontend and backend solutions. I build responsive, user-friendly interfaces along with secure and efficient backend systems. With a blend of development and design skills, I ensure both functionality and great user experience. My goal is to deliver high-quality digital solutions that meet real-world needs.</p>
+        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div className="mb-8 sm:mb-12 md:mb-16">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#dedbd2] text-center font-bold">Services</h1>
+                <p className="text-center text-base sm:text-lg md:text-xl text-[#dedbd2] mt-4 sm:mt-6 leading-relaxed max-w-3xl mx-auto">
+                    I offer modern and scalable web development services, focusing on both frontend and backend solutions. I build responsive, user-friendly interfaces along with secure and efficient backend systems. With a blend of development and design skills, I ensure both functionality and great user experience. My goal is to deliver high-quality digital solutions that meet real-world needs.
+                </p>
             </div>
             
-            <div className="flex justify-center flex-wrap gap-10 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {services.map((service, index) => (
-                    <div key={index} className="bg-[#dedbd2] w-70 h-70 rounded-lg p-5">
-                        <h1 className="text-xl mb-3">{service.icon}</h1>
-                        <h1 className="text-[25px] mb-5 text-[#335C67]">{service.title}</h1>
-                        <p className="text-[15px] text-[#335C67]">{service.description}</p>
+                    <div key={index} className="bg-[#dedbd2] rounded-lg p-6 sm:p-8 hover:shadow-lg transition transform hover:-translate-y-1 h-full flex flex-col text-center">
+                        <h1 className="text-3xl sm:text-4xl mb-4">{service.icon}</h1>
+                        <h1 className="text-lg sm:text-2xl mb-4 text-[#335C67] font-semibold">{service.title}</h1>
+                        <p className="text-sm sm:text-base text-[#335C67] leading-relaxed flex-1">{service.description}</p>
                     </div>
                 ))}
             </div>
